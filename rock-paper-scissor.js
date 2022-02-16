@@ -1,4 +1,4 @@
 function computerPlay() {
-  const positions = ["Rock", "Paper", "Scissors"];
-  return positions[Math.floor(Math.random() * 3)];
+  const options = ["Rock", "Paper", "Scissors"];
+  return options[Math.floor(Math.random() * 3)];
 }
