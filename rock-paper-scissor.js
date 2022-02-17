@@ -34,15 +34,15 @@ function game() {
     );
     const computerSelection = computerPlay();
     if (playRound(playerSelection, computerSelection) == "You Lose") {
+      computerScore++;
       console.log(
         `You Lose: Player Score: ${playerScore}, Computer Score: ${computerScore}`
       );
-      computerScore++;
     } else if (playRound(playerSelection, computerSelection) == "You Win") {
+      playerScore++;
       console.log(
         `You Win: Player Score: ${playerScore}, Computer Score: ${computerScore}`
       );
-      playerScore++;
     } else {
       console.log("It Was a Tie!");
     }
