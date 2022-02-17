@@ -10,7 +10,7 @@ function playRound(playerSelection, computerSelection) {
       computerSelection == "Scissors") ||
     (playerSelection.toLowerCase() == "scissors" && computerSelection == "Rock")
   ) {
-    return "You Lose!";
+    return "You Lose";
   } else if (
     (playerSelection.toLowerCase() == "rock" &&
       computerSelection == "Scissors") ||
@@ -18,20 +18,39 @@ function playRound(playerSelection, computerSelection) {
     (playerSelection.toLowerCase() == "scissors" &&
       computerSelection == "Paper")
   ) {
-    return "You Win!";
+    return "You Win";
   } else if (playerSelection.toLowerCase() == computerSelection.toLowerCase()) {
     return "It Was a Tie!";
   }
 }
 
-const playerSelection = "rock";
-const computerSelection = computerPlay();
-console.log(computerSelection);
-console.log(playRound(playerSelection, computerSelection));
-
 function game() {
+  let playerScore = 0;
+  let computerScore = 0;
+
   for (let i = 0; i < 5; i++) {
-    console.log(playRound(playerSelection, computerSelection));
+    const playerSelection = prompt(
+      "what option will you choose, Rock-Paper-Scissors?"
+    );
+    const computerSelection = computerPlay();
+    if (playRound(playerSelection, computerSelection) == "You Lose") {
+      console.log(
+        `You Lose: Player Score: ${playerScore}, Computer Score: ${computerScore}`
+      );
+      computerScore++;
+    } else if (playRound(playerSelection, computerSelection) == "You Win") {
+      console.log(
+        `You Win: Player Score: ${playerScore}, Computer Score: ${computerScore}`
+      );
+      playerScore++;
+    } else {
+      console.log("It Was a Tie!");
+    }
+  }
+  if (playerScore > computerScore) {
+    alert("You Win");
+  } else if (playerScore < computerScore) {
+    alert("Computer Win");
   }
 }
 
