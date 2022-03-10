@@ -1,0 +1,146 @@
+body {
+  margin: 0%;
+  font-family: "Games", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  color: #d3d3d3;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 10vh;
+  width: 100vw;
+  font-size: 23px;
+  text-align: center;
+  color: goldenrod;
+  border-bottom: 1px solid goldenrod;
+}
+
+.main {
+  height: 85vh;
+  width: 100vw;
+  text-align: center;
+}
+
+.main h2 {
+  color: #d3d3d3;
+  font-size: 30px;
+}
+
+.main h3 {
+  color: #d3d3d3;
+  font-size: 20px;
+}
+
+.container-boxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35vh;
+  width: 100vw;
+  line-height: 150px;
+}
+
+.container-boxes div {
+  height: 200px;
+  width: 150px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.container-boxes .box-vs {
+  border: none;
+  color: goldenrod;
+}
+
+.box-player {
+  background-color: white;
+}
+
+.box-computer {
+  background-color: white;
+}
+
+.img-player {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.active-overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(0, 0, 0, 0.8);
+}
+
+.box-endGame-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* From cssbuttons.io by @CristianMontoya98 */
+.btn {
+  width: 6.5em;
+  height: 2.3em;
+  margin: 0.5em;
+  background: black;
+  color: white;
+  border: d3d3d3;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+button:hover {
+  color: black;
+}
+
+button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+}
+
+button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.img-computer {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+footer {
+  height: 5vh;
+  width: 100vw;
+  text-align: center;
+  border-top: 1px solid goldenrod;
+  line-height: 2vh;
+}
