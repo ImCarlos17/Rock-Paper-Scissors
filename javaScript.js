@@ -99,9 +99,6 @@ function playGame(e) {
   const playerSelection = e.target.dataset.value;
   const computerSelection = computerPlay();
 
-  console.log(playerSelection);
-  console.log(computerSelection);
-
   if (computerSelection == "rock") {
     document.querySelector(".img-computer").setAttribute("src", "img/rock.png");
   }
