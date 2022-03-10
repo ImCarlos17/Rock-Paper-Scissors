@@ -32,19 +32,17 @@ buttons.forEach((button) => {
 buttons.forEach((button) => {
   button.addEventListener("mouseover", (e) => {
     if (e.target.dataset.value == "rock") {
-      document
-        .querySelector(".img-player")
-        .setAttribute("src", "/img/rock.png");
+      document.querySelector(".img-player").setAttribute("src", "img/rock.png");
     }
     if (e.target.dataset.value == "paper") {
       document
         .querySelector(".img-player")
-        .setAttribute("src", "/img/paper.png");
+        .setAttribute("src", "img/paper.png");
     }
     if (e.target.dataset.value == "scissors") {
       document
         .querySelector(".img-player")
-        .setAttribute("src", "/img/scissors.png");
+        .setAttribute("src", "img/scissors.png");
     }
   });
 });
@@ -105,19 +103,17 @@ function playGame(e) {
   console.log(computerSelection);
 
   if (computerSelection == "rock") {
-    document
-      .querySelector(".img-computer")
-      .setAttribute("src", "/img/rock.png");
+    document.querySelector(".img-computer").setAttribute("src", "img/rock.png");
   }
   if (computerSelection == "paper") {
     document
       .querySelector(".img-computer")
-      .setAttribute("src", "/img/paper.png");
+      .setAttribute("src", "img/paper.png");
   }
   if (computerSelection == "scissors") {
     document
       .querySelector(".img-computer")
-      .setAttribute("src", "/img/scissors.png");
+      .setAttribute("src", "img/scissors.png");
   }
 
   if (playRound(playerSelection, computerSelection) == "You Lose") {
